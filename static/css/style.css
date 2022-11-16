@@ -1,0 +1,182 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    --nav-width: 200px;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    max-width: 1000px;
+    background-color: #C3FFF8;
+    padding-left: 30px;
+}
+header {
+    left: 0;
+}
+.cat {
+    display: none;
+    position: absolute;
+    width: 100px;
+    bottom: 30px;
+    left: 30px;
+    
+}
+.logo {
+    margin-top: 20px;
+    min-width: 40px;
+    min-height: 40px;
+}
+.lines {
+    position: absolute;
+width: 349px;
+height: 425.25px;
+right: -60px;
+top: -185px;
+
+opacity: 0.3;
+}
+.nav {
+position: fixed;
+width:  var(--nav-width);
+height: 100vh;
+left: 0px;
+bottom: 0px;
+background: linear-gradient(180deg, #316FE7 0%, #29D1F5 100%);
+display: flex;
+flex-direction: column;
+justify-content: end;
+align-items: center;
+padding: 0px;
+transform: translateX(-100%);
+z-index: 1;
+transition: transform 0.5s ease-in-out;
+gap: 70px;
+}
+.lines-nav {
+    min-width: 40px;
+    min-height: 82px;
+    width: 120px; 
+    height: 328px;
+}
+.div-nav {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 30px;
+}
+
+.nav__link {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    background: rgba(255, 255, 255, 0.5);
+
+}
+
+.nav__link.active {
+    background: rgba(255, 255, 255, 0.336);
+}
+
+#app {
+    margin: 2em;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+a{
+    color: rgb(207, 63, 212);
+}
+
+.img-cont {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    /* display: flex; */
+}
+.pp {
+    margin: 10px 0;
+   display: flex; 
+
+}
+.my-photo{
+    width: 360px;
+    border-radius: 40px;
+    box-shadow: 10px 7px 4px rgba(0, 0, 0, 0.411);
+}
+.open-nav {
+    transform: translateX(0%);
+}
+
+.close_nav {
+position: absolute;
+width: 30px;
+height: 30px;
+top: 40px;
+right: 20px;
+}
+.close_nav:hover {
+    cursor: pointer;
+}
+.menu {
+    position: absolute;
+width: 2.5em;
+height: 2.5em;
+left: 19px;
+top: 24px;
+z-index: -1;
+}
+.menu:hover {
+    cursor: pointer;
+}
+.bp {
+    width: 500px;
+    border-radius: 30px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.514);
+}
+.up svg {
+    height: 3rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    color: rgb(127, 151, 130);
+    transition: 0.2s;
+}
+.up svg:hover {
+    color: black;
+}
+@media screen and (max-width: 620px){
+    body {
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 900px) {
+   body {
+    margin: 0 0 0 var(--nav-width);
+    font-size: 20px;
+} 
+.menu {
+    display: none;
+}
+.nav {
+    transform: translateX(0%);
+    gap: 177px;
+    top: 0px;
+}
+.close_nav {
+    display: none;
+}
+
+}
+@media screen and (width: 1920px) {
+    .cat {
+        display: flex;
+    }
+}
+    
